@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
+import Chars from './components/Chars';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
     };
   }
 
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people');
   }
+
+  showCard = event => (
+    this.setState({
+      starwarsChars: this.state.starwarsChars.map(starwarsChar => {
+        <starwarsChars starwarsChar={starwarsChar} />
+    })
+  })
+  );
 
   getCharacters = URL => {
     // feel free to research what this code is doing.
@@ -33,6 +42,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <Chars showCard={this.state.showCard}
+
+        />
       </div>
     );
   }
