@@ -2,15 +2,15 @@ import React from "react";
 
 // const message = 'Hello!';
 
-const Chars = props => (
-    <div class="charsProfile">
-      <h1>{props.starwarsChars.name}</h1>
-      <ul>
-        <li>DOB: {props.starwarsChars.birth_year}</li>
-        <li>Eye Color: {props.starwarsChars.eye_color}</li>
-        <li>Height{props.starwarsChars.height}</li>
-      </ul>
-    </div>
-);
+const Chars = props => {
 
-export default Chars;
+  return (
+      <div className='card'>
+      <h1 className='name'>{props.swChar.name}</h1>
+      <p>DOB: {props.swChar.birth_year}</p>
+      <p>Height: {props.swChar.height}</p>
+      <p>Eye Color: {props.swChar.eye_color}</p>
+      </div>
+  )
+}
+export default Chars; 
