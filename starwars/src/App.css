@@ -4,5 +4,11 @@
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
+  justify-content: center;
 }
 /* write your parent styles in here for your App.js */
+.charlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -6,10 +6,11 @@ const Chars = props => {
 
   return (
       <div className='card'>
-      <h1 className='name'>{props.swChar.name}</h1>
-      <p>DOB: {props.swChar.birth_year}</p>
-      <p>Height: {props.swChar.height}</p>
-      <p>Eye Color: {props.swChar.eye_color}</p>
+      <p>DOB: {props.char.birth_year}</p>
+      <p>Height: {props.char.height}</p>
+      <p className='eyeColor'>Eye Color: {props.char.eye_color}</p>
+      <p>Film Appearances: {props.char.films.length}</p>
+      <h1 className='name'>{props.char.name}</h1>
       </div>
   )
 }
